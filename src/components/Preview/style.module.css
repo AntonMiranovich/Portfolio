@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+  margin-top: 160px;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+
+    p {
+      font: 400 22px "Poppins";
+    }
+
+    h1 {
+      font: 800 88px "Poppins";
+    }
+
+    .pFocus {
+      font: 400 22px "Poppins";
+      width: 642px;
+    }
+
+    .button {
+      border: 1px solid #000000;
+      background: #f5cc44;
+      width: 190px;
+      height: 48px;
+      border-radius: 15px;
+      padding: 13px 29px;
+      margin-top: 30px;
+      font: 600 16px "Poppins";
+    }
+  }
+
+  .myFoto {
+    background: #ff6b6b;
+    clip-path: path("M0.868103 48.3519C0.868103 39.0655 7.27202 30.9872 16.3273 28.9287C179.22 -8.10096 273.355 -9.65387 422.155 28.6011C430.922 30.855 437 38.7941 437 47.846V348.357C437 356.328 432.266 363.538 424.952 366.708L242.444 445.794C237.697 447.851 232.337 447.988 227.49 446.177L13.8669 366.345C6.04972 363.423 0.868103 355.955 0.868103 347.61V48.3519Z"
+      );
+    width: 453px;
+    height: 453px;
+
+    .image {
+      background-image: url("../../assets/myFoto.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 425px;
+      height: 600px;
+      clip-path: path("M0.868 48.352C0.868 39.066 7.272 30.987 16.327 28.929C179.22 -8.101 273.355 -9.654 422.155 28.601C430.922 30.855 437 38.794 437 47.846V348.357C437 356.328 432.266 363.538 424.952 366.708L242.444 445.794C237.697 447.851 232.337 447.988 227.49 446.177L13.867 366.345C6.05 363.423 0.868 355.955 0.868 347.611V48.352Z"
+        );
+    }
+  }
+}
+
+.contactingMe {
+  margin-top: 200px;
+}
+
+.skills {
+  display: flex;
+  margin-top: 100px;
+
+  .roles {
+    display: flex;
+    gap: 70px;
+
+     .roles_item {
+      display: flex;
+      gap: 15px;
+
+      .icon_1,
+      .icon_2,
+      .icon_3 {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .icon_1 {
+        background-image: url('./assets/icon1.svg');
+      }
+
+      .icon_2 {
+        background-image: url('./assets/icon2.svg');
+      }
+
+      .icon_3 {
+        background-image: url('./assets/icon3.svg');
+      }
+
+      & h3 {
+        font: 800 16px Poppins;
+        color: #000000;
+      }
+
+      & p {
+        font: 300 10px Poppins;
+        color: #000000;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  .smallImage {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    .link {
+      background-image: url("../../assets/link.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+    }
+    .git {
+      background-image: url("../../assets/git.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+    }
+    .telegram {
+      background-image: url("../../assets/telegram.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .paragraphs {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    p {
+      font: 400 24px Poppins;
+    }
+  }
+}
