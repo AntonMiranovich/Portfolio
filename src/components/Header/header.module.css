@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 73px 5px 0;
+}
+
+.images {
+    display: flex;
+    gap: 30px;
+
+    .linkedin,
+    .github,
+    .telegram,
+    .email {
+        width: 32px;
+        height: 32px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .linkedin {
+        background-image: url('./assets/linkedin.svg');
+    }
+
+    .github {
+        background-image: url('./assets/github.svg');
+    }
+
+    .telegram {
+        background-image: url('./assets/telegram.svg');
+    }
+
+    .email {
+        background-image: url('./assets/email.svg');
+       
+    }
+
+    .email::after {
+        content: "antonmir992@gmail.com"; 
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(200, 200, 200, 0.9); 
+        color: #000;
+        padding: 8px;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        white-space: nowrap; 
+        visibility: hidden; 
+        opacity: 0; 
+        transition: opacity 0.3s, visibility 0.3s; 
+        font: 700 14px Montserrat;
+    }
+
+    .email:hover::after {
+        visibility: visible; 
+        opacity: 1; 
+    }
+}
+
+.info {
+    display: flex;
+    gap: 60px;
+
+    & p {
+        font: 400 22px Montserrat;
+        color: #000000;
+        cursor: pointer;
+    }
+}

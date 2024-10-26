@@ -1,0 +1,83 @@
+.wrapper {
+    margin-top: 100px;
+    
+    & .visit_card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+
+        & .about_me {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 629px;
+
+            & p {
+                font: 400 22px Montserrat;
+                color: #000000;
+            }
+
+            & h1 {
+                font: 800 88px Montserrat;
+                line-height: 100px;
+                color: #022f8a;
+            }
+        }
+
+        & img {
+            background-image: url(${foto});
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 250px;
+            box-shadow: 5px 5px 5px 5px #0000004d;
+        }
+    }
+
+    & .skills {
+        display: flex;
+        margin-top: 100px;
+
+        & .roles {
+            display: flex;
+            gap: 70px;
+
+            & .roles_item {
+                display: flex;
+                gap: 15px;
+
+                .icon_1,
+                .icon_2,
+                .icon_3 {
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                .icon_1 {
+                    background-image: url('./assets/icon1.svg');
+                }
+
+                .icon_2 {
+                    background-image: url('./assets/icon2.svg');
+                }
+
+                .icon_3 {
+                    background-image: url('./assets/icon3.svg');
+                }
+
+                & h3 {
+                    font: 800 16px Montserrat;
+                    color: #000000;
+                }
+
+                & p {
+                    font: 400 10px Montserrat;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

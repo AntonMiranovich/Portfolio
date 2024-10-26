@@ -1,0 +1,99 @@
+.wrapper {
+    margin: 0 0 200px;
+    /* max-width: 1335px; */
+
+    h2 {
+        font-family: Poppins;
+        font-size: 44px;
+        font-weight: 800;
+        line-height: 100px;
+        text-align: center;
+        color: #022f8a;
+    }
+
+    p {
+        font-family: Poppins;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 100px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .whirligig_projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        .project_item {
+            border: 2px solid #000000;
+            box-shadow: 5px 4px 0px 2px #000000;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 10px;
+            max-width: 350px;
+
+            .img_item {
+                background-image: url(${img});
+                width: 320px;
+                height: 250px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: #939393;
+                border-radius: 12px;
+            }
+
+            .environment {
+                display: flex;
+                gap: 6px;
+
+                .env_item {
+                    padding: 5px 9px;
+                    background: #939393;
+                    border-radius: 10px;
+
+                    p {
+                        font-family: Poppins;
+                        font-size: 10px;
+                        font-weight: 700;
+                        line-height: 10.93px;
+                        text-align: left;
+                        color: #000000;
+                    }
+                }
+            }
+
+            .name_item {
+                font-family: Poppins;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22.63px;
+                text-align: left;
+                color: #000000;
+            }
+
+            .text_item {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.6px;
+                text-align: left;
+                color: #000000;
+            }
+
+            .view {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19.12px;
+                text-align: left;
+                color: #000000;
+            }
+
+        }
+
+    }
+}
