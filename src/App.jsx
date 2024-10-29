@@ -10,18 +10,10 @@ export default function App() {
   return <>
     <Header />
     <main>
-      <section>
-        <Preview />
-      </section>
-      <section>
-        <About />
-      </section>
-      <section>
-        <Experience />
-      </section>
-      <section>
-        <MyProjects />
-      </section>
+      <Preview />
+      <About />
+      <Experience />
+      <MyProjects />
     </main>
     <Footer />
   </>

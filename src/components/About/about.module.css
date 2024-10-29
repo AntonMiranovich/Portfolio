@@ -1,5 +1,5 @@
 .wrapper {
-    margin: 300px auto;
+    margin: 250px auto;
     max-width: 1335px;
 
     .info {
@@ -10,28 +10,14 @@
         max-width: 1025px;
         margin: auto;
 
-        & h2 {
-            font-family: Poppins;
-            font-size: 150px;
-            font-weight: 800;
-            text-align: center;
-            line-height: 150px;
-            color: #000000;
-        }
-
         p {
-            font-family: Poppins;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 33px;
             text-align: center;
-
         }
 
         button {
             border: 1px solid #000000;
             box-shadow: 4px 3px 0px 1px #000000;
-            background: #022f8a;
+            background: #8a4802;
             color: #fefefe;
             border-radius: 15px;
             padding: 11px 34px;
@@ -42,4 +28,21 @@
         }
     }
 
+}
+
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        & h1 {
+            font-size: 70px;
+        }
+
+        & .info h2 {
+            font-size: 44px;
+        }
+
+        & p {
+            font-size: 18px;
+        }
+    }
 }

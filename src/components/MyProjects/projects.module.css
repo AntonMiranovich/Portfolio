@@ -3,21 +3,16 @@
     /* max-width: 1335px; */
 
     h2 {
-        font-family: Poppins;
+        /* font-family: Poppins;
         font-size: 44px;
         font-weight: 800;
-        line-height: 100px;
+        line-height: 100px; */
         text-align: center;
-        color: #022f8a;
+        color: #8a4802;
     }
 
     p {
-        font-family: Poppins;
-        font-size: 25px;
-        font-weight: 300;
-        line-height: 100px;
         text-align: center;
-        color: #000000;
     }
 
     .whirligig_projects {
@@ -27,12 +22,13 @@
         justify-content: center;
 
         .project_item {
+            margin-top: 80px;
+            padding: 20px;
             border: 2px solid #000000;
             box-shadow: 5px 4px 0px 2px #000000;
             border-radius: 12px;
             display: flex;
             flex-direction: column;
-            padding: 15px;
             gap: 10px;
             max-width: 350px;
 
@@ -55,13 +51,8 @@
                     background: #939393;
                     border-radius: 10px;
 
-                    p {
-                        font-family: Poppins;
-                        font-size: 10px;
-                        font-weight: 700;
-                        line-height: 10.93px;
-                        text-align: left;
-                        color: #000000;
+                    & p {
+                        font-size: 16px;
                     }
                 }
             }
@@ -75,25 +66,24 @@
                 color: #000000;
             }
 
-            .text_item {
-                font-family: Poppins;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 17.6px;
-                text-align: left;
-                color: #000000;
-            }
-
-            .view {
-                font-family: Poppins;
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 19.12px;
-                text-align: left;
-                color: #000000;
-            }
 
         }
 
     }
+}
+
+@media screen and (max-width: 800px) {
+	.wrapper {
+		& h1 {
+			font-size: 70px;
+		}
+
+        & h2 {
+			font-size: 44px;
+		}
+        
+		& p {
+			font-size: 18px;
+		}
+	}
 }

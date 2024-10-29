@@ -9,8 +9,28 @@ body {
   background: #F9F5F2;
   overflow-x: hidden;
   margin: auto;
+  padding: 0 30px;
 }
 
 a {
   text-decoration: none;
+}
+
+p, ul li {
+  font: 400 22px Montserrat;
+  color: #000000;
+}
+
+h1 {
+  font: 400 88px Montserrat;
+}
+
+h2 {
+  font: 800 80px Montserrat;
+  color: #8a4802;
+  text-align: center;
+}
+h2 {
+  font: 800 80px Montserrat;
+  color: #8a4802;
 }
