@@ -1,63 +1,30 @@
 import img from './assets/coffeine.png'
+import imgEduc from './assets/imgEducation.jpg'
 import style from './projects.module.css'
 
 export default function MyProjects() {
 	const arr_projects = [
 		{
 			id: 1,
-			name: 'ReDesign Apps',
+			name: 'Caffeine',
 			environment: ['#javascript', '#html', '#css'],
 			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
+				'Our app lets you order coffee, get drink info, enjoy promotions and bonuses, receive personalized recommendations, and leave feedback to improve service.',
 			img: style.img_item,
+			imgPath: img,
+			hrev: 'https://new-caffeine-5ynp.vercel.app/',
+			hrevCode: 'https://github.com/AntonMiranovich/newCaffeine',
 		},
 		{
 			id: 2,
-			name: 'ReDesign Apps',
+			name: 'EducationPlatform',
 			environment: ['#javascript', '#html', '#css'],
 			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
+				'Our platform offers interactive courses, expert guidance, and personalized paths with an intuitive interface, progress tracking,  and adaptive  curriculum for efficient learning.',
 			img: style.img_item,
-		},
-		{
-			id: 3,
-			name: 'ReDesign Apps',
-			environment: ['#javascript', '#html', '#css'],
-			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
-			img: style.img_item,
-		},
-		{
-			id: 4,
-			name: 'ReDesign Apps',
-			environment: ['#javascript', '#html', '#css'],
-			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
-			img: style.img_item,
-		},
-		{
-			id: 5,
-			name: 'ReDesign Apps',
-			environment: ['#javascript', '#html', '#css'],
-			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
-			img: style.img_item,
-		},
-		{
-			id: 6,
-			name: 'ReDesign Apps',
-			environment: ['#javascript', '#html', '#css'],
-			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
-			img: style.img_item,
-		},
-		{
-			id: 7,
-			name: 'ReDesign Apps',
-			environment: ['#javascript', '#html', '#css'],
-			description:
-				'lorem ipsum dolor si amet adiran jamet aku ganteng aku adalah bukan jamet amar jamet aku bukan jamet a lorem ipsumd olor si amet jame tjsajklhnsajhkl',
-			img: style.img_item,
+			imgPath: imgEduc,
+			hrev: 'https://education-platform-pqnc.vercel.app/',
+			hrevCode: 'https://github.com/AntonMiranovich/EducationPlatform',
 		},
 	]
 
@@ -69,7 +36,7 @@ export default function MyProjects() {
 				<div className={style.whirligig_projects}>
 					{arr_projects.map(el => (
 						<div key={el.id} className={style.project_item}>
-							<img className={el.img} src={img} alt='img' />
+							<img className={el.img} src={el.imgPath} alt='img' />
 							<div className={style.environment}>
 								{el.environment.map((elem, i) => (
 									<div key={i} className={style.env_item}>
@@ -79,11 +46,12 @@ export default function MyProjects() {
 							</div>
 							<h3 className={style.name_item}>{el.name}</h3>
 							<p className={style.text_item}>{el.description}</p>
-							<p className={style.view}>see project →</p>
+							<p className={style.view}><a href={el.hrev}>see project →</a></p>
+							<p className={style.view}><a href={el.hrevCode}>see code →</a></p>
 						</div>
 					))}
 				</div>
 			</div>
-		</section>
+		</section >
 	)
 }
