@@ -54,7 +54,7 @@ export default function Header() {
 					/>
 
 					{isshowBurger && (
-						<div
+						<div className={style.modal}
 							style={{
 								justifyContent: 'center',
 								alignItems: 'center',
