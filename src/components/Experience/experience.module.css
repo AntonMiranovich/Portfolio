@@ -2,7 +2,7 @@
 	margin: 300px 0 250px;
 
 	.title {
-		font-family: Poppins;
+		font-family: Montserrat;
 		font-size: 44px;
 		font-weight: 800;
 		text-align: center;
@@ -35,7 +35,7 @@
 			flex-direction: column;
 
 			.title_item {
-				font-family: Poppins;
+				font-family: Montserrat;
 				font-size: 16px;
 				font-weight: 600;
 				text-align: center;
