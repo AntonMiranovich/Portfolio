@@ -35,9 +35,9 @@ export default function Header() {
 		<>
 			<nav className={style.wrapper}>
 				<div className={style.images}>
-					<a href="https://www.linkedin.com/in/anton-miranovich-7005b6286/"><motion.div whileHover={{ scale: 1.3 }} className={style.linkedin}></motion.div></a>
-					<a href="https://github.com/AntonMiranovich"><motion.div whileHover={{ scale: 1.3 }} className={style.github}></motion.div></a>
-					<a href="https://t.me/antonmiranovich"><motion.div whileHover={{ scale: 1.3 }} className={style.telegram}></motion.div></a>
+					<a href="https://www.linkedin.com/in/anton-miranovich-7005b6286/" target="_blank"><motion.div whileHover={{ scale: 1.3 }} className={style.linkedin}></motion.div></a>
+					<a href="https://github.com/AntonMiranovich" target="_blank"><motion.div whileHover={{ scale: 1.3 }} className={style.github}></motion.div></a>
+					<a href="https://t.me/antonmiranovich" target="_blank"><motion.div whileHover={{ scale: 1.3 }} className={style.telegram}></motion.div></a>
 					<motion.div whileHover={{ scale: 1.3 }} className={style.email}></motion.div>
 				</div>
 				<div className={style.info}>
