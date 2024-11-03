@@ -22,3 +22,4 @@ Contact Information:
 My email, Telegram , Git, and links to my profiles on professional social networks like LinkedIn.
 
 This project aims to create a personalized and professionally appealing resume that attracts the attention of potential employers and partners.
+
