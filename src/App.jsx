@@ -4,17 +4,19 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import MyProjects from './components/MyProjects/MyProjects';
 import Preview from './components/Preview/Preview';
+import { useState } from "react";
 
 export default function App() {
+  const [langv, setLangv] = useState('RU')
 
   return <>
-    <Header />
+    <Header langv={langv} setLangv={setLangv} />
     <main>
-      <Preview />
-      <About />
-      <Experience />
-      <MyProjects />
+      <Preview langv={langv} />
+      <About langv={langv} />
+      <Experience langv={langv} />
+      <MyProjects langv={langv} />
     </main>
-    <Footer />
+    <Footer langv={langv} />
   </>
 }

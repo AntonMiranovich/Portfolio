@@ -4,7 +4,7 @@ import close from './assets/close.svg'
 import style from './header.module.css'
 import { motion } from 'framer-motion'
 
-export default function Header() {
+export default function Header({ langv, setLangv }) {
 	const [isshowBurger, setShowBurger] = useState(false)
 
 	useEffect(() => {
@@ -41,18 +41,28 @@ export default function Header() {
 					<motion.div whileHover={{ scale: 1.3 }} className={style.email}></motion.div>
 				</div>
 				<div className={style.info}>
-					<motion.p whileHover={{ scale: 1.2 }} onClick={handleExperienceClick}>Обо мне</motion.p>
-					<motion.p whileHover={{ scale: 1.2 }} onClick={handleArrRolesClick}>Опыт работы</motion.p>
-					<motion.p whileHover={{ scale: 1.2 }} onClick={handleMyProjectsClick}>Мои проекты</motion.p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleExperienceClick}>{langv === "RU" ? 'Обо мне' : 'About me'}</motion.p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleArrRolesClick}>{langv === "RU" ? 'Опыт работы' : 'Work experience'}</motion.p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleMyProjectsClick}>{langv === "RU" ? 'Мои проекты' : 'My projects'}</motion.p>
+					<div className={style.lenguage} onClick={() => langv === "RU" ? setLangv('EN') : setLangv('RU')}>
+						<div className={style.imgLeng}></div>
+						<h3 className={style.langv}>{langv}</h3>
+					</div>
 				</div>
 
 				<div className={style.burger}>
+					<div className={style.lenguage} onClick={() => langv === "RU" ? setLangv('EN') : setLangv('RU')}>
+						<div className={style.imgLeng}></div>
+						<h3 className={style.langv}>{langv}</h3>
+					</div>
+
 					<img
 						onClick={() => setShowBurger(!isshowBurger)}
 						src={burgermenu}
-						style={{ width: 30 }}
+						style={{ width: 45 }}
 						alt=''
 					/>
+
 
 					{isshowBurger && (
 						<div className={style.modal}
@@ -82,9 +92,9 @@ export default function Header() {
 								alt=''
 							/>
 
-							<p onClick={() => { setShowBurger(false), handleExperienceClick() }}>Обо мне</p>
-							<p onClick={() => { setShowBurger(false), handleArrRolesClick() }}>Опыт работы</p>
-							<p onClick={() => { setShowBurger(false), handleMyProjectsClick() }}>Мои проекты</p>
+							<p onClick={() => { setShowBurger(false), handleExperienceClick() }}>{langv === "RU" ? 'Обо мне' : 'About me'}</p>
+							<p onClick={() => { setShowBurger(false), handleArrRolesClick() }}>{langv === "RU" ? 'Опыт работы' : 'Work experience'}</p>
+							<p onClick={() => { setShowBurger(false), handleMyProjectsClick() }}>{langv === "RU" ? 'Мои проекты' : 'My projects'}</p>
 						</div>
 					)}
 				</div>

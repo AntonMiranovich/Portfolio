@@ -23,7 +23,7 @@ const animation = {
 	}),
 }
 
-export default function Preview() {
+export default function Preview({ langv }) {
 	const arr_roles = [
 		{
 			id: 1,
@@ -76,16 +76,22 @@ export default function Preview() {
 				>
 					<div className={style.about_me}>
 						<motion.p custom={1} variants={animation}>
-							Привет, меня зовут Антон Миранович, и я
+							{langv === "RU" ? 'Привет, меня зовут Антон Миранович, и я' : 'Hi, my name is Anton Miranovich and I am a'}
 						</motion.p>
 						<motion.h1 custom={2} variants={animation}>
-							Full Stack Разработчик
+							{langv === 'RU' ? 'Full Stack Разработчик' : 'Full Stack Developer'}
 						</motion.h1>
 						<motion.p custom={3} variants={animation}>
-							который, сосредоточен на использовании возможностей Next.js с
+							{langv === "RU" ?
+								`который, сосредоточен на использовании возможностей Next.js с
 							Express.js и REST API для создания динамических веб-приложений,
 							создавая бесперебойный пользовательский интерфейс и воплощающий
-							свои идеи в жизнь.
+							свои идеи в жизнь.`
+								:
+								`who is focused on leveraging the power of Next.js with
+							 Express.js and REST API to build dynamic web applications,
+							creating seamless user experiences and bringing your
+							 ideas to life.`}
 						</motion.p>
 					</div>
 					<motion.img custom={4} variants={animation} src={foto} alt='foto' />
@@ -109,13 +115,13 @@ export default function Preview() {
 								<div className={style.info_item}>
 									<h3 className={style.roles_name}>{el.name}</h3>
 									<div className={style.line}></div>
-									<h3>Я работал с</h3>
+									<h3>{langv === 'RU' ? 'Я работал с' : 'I worked with'}</h3>
 									{el.description.map((elem, i) => (
 										<ul key={i}>
 											<li>{elem}</li>
 										</ul>
 									))}
-									<h3 className={style.roles_name}>{el.also}</h3>
+									<h3 className={style.roles_name}>{langv === 'RU' ? el.also : el.also !== null ? 'and also' : null}</h3>
 									{el.additionally.map((element, i) => (
 										<ul key={i}>
 											<li>{element}</li>

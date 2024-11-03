@@ -22,7 +22,7 @@ const animation = {
     }),
 };
 
-export default function About() {
+export default function About({ langv }) {
     const handleContactClick = () => {
         const footer = document.getElementById('footer');
         if (footer) {
@@ -36,10 +36,10 @@ export default function About() {
             viewport={{ once: true }}
             className={style.wrapper}>
             <div className={style.info}>
-                <motion.h2 custom={1} variants={animation}>Свяжитесь со мной</motion.h2>
-                <motion.p custom={2} variants={animation}>Я мотивированный и постоянно развивающийся фронтенд-разработчик. Не стесняйтесь заглянуть в мое портфолио, чтобы ознакомиться с разнообразными проектами, которые я завершил. Если Вас заинтересовала моя работа и Вы хотите, чтобы я воплотил Ваш проект в жизнь, не стесняйтесь связаться со мной!</motion.p>
+                <motion.h2 custom={1} variants={animation}>	{langv === 'RU' ? 'Свяжитесь со мной' : 'Contact me'}</motion.h2>
+                <motion.p custom={2} variants={animation}>{langv === 'RU' ? 'Я мотивированный и постоянно развивающийся фронтенд-разработчик. Не стесняйтесь заглянуть в мое портфолио, чтобы ознакомиться с разнообразными проектами, которые я завершил. Если Вас заинтересовала моя работа и Вы хотите, чтобы я воплотил Ваш проект в жизнь, не стесняйтесь связаться со мной!' : 'I am a motivated and constantly evolving frontend developer. Feel free to check out my portfolio to see the variety of projects I have completed. If you are interested in my work and would like me to bring your project to life, feel free to contact me!'}</motion.p>
                 <motion.button whileHover={{ scale: 1.3 }} custom={3} variants={animation} onClick={handleContactClick}>
-                    Мои контакты
+                    {langv === 'RU' ? 'Мои контакты' : 'My contacts'}
                 </motion.button>
 
             </div>

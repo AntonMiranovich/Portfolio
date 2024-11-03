@@ -1,9 +1,9 @@
 import style from './footer.module.css'
 import { motion } from 'framer-motion'
 
-export default function Footer() {
+export default function Footer({ langv }) {
     return <footer id="footer" className={style.wrapper}>
-        <p className={style.title}>Мои контакты</p>
+        <p className={style.title}> {langv === 'RU' ? 'Мои контакты' : 'My contacts'}</p>
         <div className={style.line}></div>
         <nav className={style.icons_contacts}>
             <a href="https://www.linkedin.com/in/anton-miranovich-7005b6286/" target="_blank"><motion.div whileHover={{ scale: 1.2 }} className={style.linkedin}></motion.div></a>
