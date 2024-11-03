@@ -32,12 +32,11 @@
 
 	.skills {
 		display: flex;
-		margin-top: 100px;
+		padding-top: 100px;
 
 		.roles {
 			width: 100%;
 			display: flex;
-			/* gap: 70px; */
 			flex-wrap: wrap;
 			justify-content: space-between;
 

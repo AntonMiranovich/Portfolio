@@ -95,8 +95,9 @@ export default function Preview() {
 					whileInView='visibleVertical'
 					viewport={{ once: true }}
 					className={style.skills}
+					id='arrRoles'
 				>
-					<div id='arrRoles' className={style.roles}>
+					<div className={style.roles}>
 						{arr_roles.map(el => (
 							<motion.div
 								custom={4 + el.id}

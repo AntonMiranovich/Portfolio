@@ -60,8 +60,8 @@ export default function MyProjects() {
 							<h3 className={style.name_item}>{el.name}</h3>
 							<p className={style.text_item}>{el.description}</p>
 							<div className={style.viewWrapper}>
-								<p className={style.view}><a href={el.hrev}>see project →</a></p>
-								<p className={style.view}><a href={el.hrevCode}>see code →</a></p>
+								<p className={style.view}><a href={el.hrev} target="_blank">see project →</a></p>
+								<p className={style.view}><a href={el.hrevCode} target="_blank">see code →</a></p>
 							</div>
 						</motion.div>
 					))}
