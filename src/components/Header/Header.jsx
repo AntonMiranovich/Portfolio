@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import burgermenu from './assets/burgermenu.svg'
 import close from './assets/close.svg'
 import style from './header.module.css'
+import { motion } from 'framer-motion'
 
 export default function Header() {
 	const [isshowBurger, setShowBurger] = useState(false)
@@ -34,15 +35,15 @@ export default function Header() {
 		<>
 			<nav className={style.wrapper}>
 				<div className={style.images}>
-					<a href="https://www.linkedin.com/in/anton-miranovich-7005b6286/"><div className={style.linkedin}></div></a>
-					<a href="https://github.com/AntonMiranovich"><div className={style.github}></div></a>
-					<a href="https://t.me/antonmiranovich"><div className={style.telegram}></div></a>
-					<div className={style.email}></div>
+					<a href="https://www.linkedin.com/in/anton-miranovich-7005b6286/"><motion.div whileHover={{ scale: 1.3 }} className={style.linkedin}></motion.div></a>
+					<a href="https://github.com/AntonMiranovich"><motion.div whileHover={{ scale: 1.3 }} className={style.github}></motion.div></a>
+					<a href="https://t.me/antonmiranovich"><motion.div whileHover={{ scale: 1.3 }} className={style.telegram}></motion.div></a>
+					<motion.div whileHover={{ scale: 1.3 }} className={style.email}></motion.div>
 				</div>
 				<div className={style.info}>
-					<p onClick={handleExperienceClick}>Обо мне</p>
-					<p onClick={handleArrRolesClick}>Опыт работы</p>
-					<p onClick={handleMyProjectsClick}>Мои проекты</p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleExperienceClick}>Обо мне</motion.p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleArrRolesClick}>Опыт работы</motion.p>
+					<motion.p whileHover={{ scale: 1.2 }} onClick={handleMyProjectsClick}>Мои проекты</motion.p>
 				</div>
 
 				<div className={style.burger}>
