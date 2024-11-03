@@ -82,9 +82,9 @@ export default function Header() {
 								alt=''
 							/>
 
-							<p>Обо мне</p>
-							<p>Опыт работы</p>
-							<p>Мои проекты</p>
+							<p onClick={() => { setShowBurger(false), handleExperienceClick() }}>Обо мне</p>
+							<p onClick={() => { setShowBurger(false), handleArrRolesClick() }}>Опыт работы</p>
+							<p onClick={() => { setShowBurger(false), handleMyProjectsClick() }}>Мои проекты</p>
 						</div>
 					)}
 				</div>
