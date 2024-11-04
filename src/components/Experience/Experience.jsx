@@ -43,7 +43,7 @@ export default function Experience({ langv }) {
 		<section id='experience'>
 			<div className={style.wrapper}>
 				<h2 className={style.title}>{langv === 'RU' ? 'Что я делаю' : 'What i do'}</h2>
-				<p>{langv === 'RU' ? 'ак полный стек' : 'as a Full Stack'}к</p>
+				<p>{langv === 'RU' ? 'как полный стек' : 'as a Full Stack'}к</p>
 				<div className={style.exp_items}>
 					{arr_experience.map(el => (
 						<div key={el.id} className={style.border_item}>
