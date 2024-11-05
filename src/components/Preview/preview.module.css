@@ -6,6 +6,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap-reverse;
 		gap: 30px;
+		margin-bottom: 200px;
 
 		.about_me {
 			display: flex;
@@ -32,17 +33,26 @@
 
 	.skills {
 		display: flex;
-		padding-top: 100px;
 
 		.roles {
 			width: 100%;
 			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
+			flex-direction: column;
+			justify-content: center;
+			gap: 60px;
+
+			.mySkillsTitle {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font: 800 40px Montserrat;
+				color: #8a4802;
+			}
+
+
 
 			.roles_item {
-				display: flex;
-				gap: 15px;
+
 
 				.icon_1,
 				.icon_2,
@@ -72,17 +82,34 @@
 
 				.line {
 					border: 1px solid #66666676;
+					width: 70%;
 				}
 
 				.info_item {
 					display: flex;
 					flex-direction: column;
+					justify-content: center;
+					align-items: center;
 					gap: 10px;
 				}
 
-				.info_item ul {
-					list-style-type: square;
-					margin-top: 10px;
+				.iconTatle {
+					display: flex;
+					justify-content: center;
+					gap: 15px;
+				}
+
+				.list {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					gap: 20px;
+
+					p {
+						width: 57%;
+					}
 				}
 			}
 		}

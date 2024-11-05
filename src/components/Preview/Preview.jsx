@@ -23,26 +23,34 @@ const animation = {
 	}),
 }
 
+const animation2 = {
+	hiddenHorizontal: {
+		x: 100,
+		opacity: 0,
+	},
+	visibleHorizontal: custom => ({
+		x: 0,
+		opacity: 1,
+		transition: { delay: custom * 0.2 },
+	}),
+	hiddenVertical: {
+		y: -100,
+		opacity: 0,
+	},
+	visibleVertical: custom => ({
+		y: 0,
+		opacity: 1,
+		transition: { delay: custom * 0.2 },
+	}),
+}
+
 export default function Preview({ langv }) {
 	const arr_roles = [
 		{
 			id: 1,
 			name: 'Frontend',
-			description: [
-				'JavaScript',
-				'TypeScript',
-				'React',
-				'Next.js',
-				'Redux Toolkit',
-				'Redux Toolkit Query',
-				'Material UI',
-				'Mantine',
-				'HTML',
-				'CSS',
-				'SCSS',
-				'Framer motion',
-				'Styled components',
-			],
+			description:
+				'JavaScript, TypeScript, React, Next.js, Redux Toolkit, Redux Toolkit Query, Material UI, Mantine, HTML, CSS, SCSS, Framer motion, Styled components',
 			roles_icon: style.icon_1,
 			also: null,
 			additionally: [],
@@ -50,18 +58,18 @@ export default function Preview({ langv }) {
 		{
 			id: 2,
 			name: 'Backend',
-			description: ['JavaScript', 'TypeScript', 'Node.js', 'Express', ' Jest'],
+			description: 'JavaScript, TypeScript, Node.js, Express, Jest',
 			roles_icon: style.icon_2,
 			also: null,
 			additionally: [],
 		},
 		{
 			id: 3,
-			name: 'Архитектор баз данных',
-			description: ['MySQL', 'PostgreSQL'],
+			name: langv === 'RU' ? 'Архитектор баз данных' : 'Database Architect',
+			description: 'MySQL, PostgreSQL, MongoDB',
 			roles_icon: style.icon_3,
 			also: 'а также',
-			additionally: ['Mocha', 'Jest', 'Git', 'Figma'],
+			additionally: 'Mocha, Jest, Git, Figma',
 		},
 	]
 
@@ -104,31 +112,40 @@ export default function Preview({ langv }) {
 					id='arrRoles'
 				>
 					<div className={style.roles}>
+						<motion.h3
+							custom={1}
+							variants={animation2}
+							className={style.mySkillsTitle}>{langv === 'RU' ? 'Мои навыки' : 'My Skills'}</motion.h3>
 						{arr_roles.map(el => (
-							<motion.div
-								custom={4 + el.id}
-								variants={animation}
-								key={el.id}
-								className={style.roles_item}
-							>
-								<div className={el.roles_icon}></div>
+							<div key={el} className={style.roles_item}>
 								<div className={style.info_item}>
-									<h3 className={style.roles_name}>{el.name}</h3>
-									<div className={style.line}></div>
-									<h3>{langv === 'RU' ? 'Я работал с' : 'I worked with'}</h3>
-									{el.description.map((elem, i) => (
-										<ul key={i}>
-											<li>{elem}</li>
-										</ul>
-									))}
-									<h3 className={style.roles_name}>{langv === 'RU' ? el.also : el.also !== null ? 'and also' : null}</h3>
-									{el.additionally.map((element, i) => (
-										<ul key={i}>
-											<li>{element}</li>
-										</ul>
-									))}
+									<motion.div
+										initial={{ opacity: 0, y: -100 }}
+										whileInView={{ opacity: 1, y: 0 }}
+										transition={{duration: 1, delay: 0.2 * el.id }}
+										viewport={{ once: true }}
+										className={style.iconTatle}>
+										<div className={el.roles_icon}></div>
+										<h3 className={style.roles_name}>{el.name}</h3>
+									</motion.div>
+									<motion.div
+										initial={{ opacity: 0, y: -100 }}
+										whileInView={{ opacity: 1, y: 0 }}
+										transition={{duration: 1, delay: 0.2 * el.id }}
+										viewport={{ once: true }}
+										className={style.line}></motion.div>
+									<motion.div
+										initial={{ opacity: 0 }}
+										whileInView={{ opacity: 1 }}
+										transition={{ duration: 1, delay: 0.5 + 0.2 * el.id }}
+										viewport={{ once: true }}
+										className={style.list}>
+										<p>{el.description}</p>
+										<h3 className={style.roles_name}>{langv === 'RU' ? el.also : el.also !== null ? 'and also' : null}</h3>
+										<p>{el.additionally}</p>
+									</motion.div>
 								</div>
-							</motion.div>
+							</div>
 						))}
 					</div>
 				</motion.div>

@@ -11,6 +11,7 @@
 
 	p {
 		text-align: center;
+		font-size: 15px;
 	}
 
 	.exp_items {
@@ -20,7 +21,7 @@
 		position: relative;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin-top: 80px;
+		margin-top: 60px;
 
 		.border_item {
 			padding: 30px;
@@ -33,6 +34,7 @@
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
+			gap: 15px;
 
 			.title_item {
 				font-family: Montserrat;

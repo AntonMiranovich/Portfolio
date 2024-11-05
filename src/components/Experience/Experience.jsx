@@ -18,9 +18,9 @@ export default function Experience({ langv }) {
 			id: 1,
 			title: 'Front-End Development',
 			description:
-				'Создание интерактивного пользовательского интерфейса с помощью Next.js',
+				'Создание интерактивного пользовательского интерфейса с помощью JavaScript, TypeScript, React, Next.js',
 			descriptionEn:
-				'Building an interactive user interface with Next.js',
+				'Building an interactive user interface with JavaScript, TypeScript, React, Next.js',
 		},
 		{
 			id: 2,
@@ -33,9 +33,9 @@ export default function Experience({ langv }) {
 		{
 			id: 3,
 			title: 'Back-End Development',
-			description: 'Создание динамического приложения с Express.js и SQL.',
+			description: 'Создание динамического приложения с Express.js, Jest и SQL.',
 			descriptionEn:
-				'Building a dynamic application with Express.js and SQL.',
+				'Building a dynamic application with Express.js, Jest and SQL.',
 		},
 	]
 
@@ -43,7 +43,7 @@ export default function Experience({ langv }) {
 		<section id='experience'>
 			<div className={style.wrapper}>
 				<h2 className={style.title}>{langv === 'RU' ? 'Что я делаю' : 'What i do'}</h2>
-				<p>{langv === 'RU' ? 'как полный стек' : 'as a Full Stack'}к</p>
+				<p>{langv === 'RU' ? 'как полный стек' : 'as a Full Stack'}</p>
 				<div className={style.exp_items}>
 					{arr_experience.map(el => (
 						<div key={el.id} className={style.border_item}>
