@@ -104,17 +104,13 @@ export default function Preview({ langv }) {
 					</div>
 					<motion.img custom={4} variants={animation} src={foto} alt='foto' />
 				</motion.div>
-				<motion.div
-					initial='hiddenVertical'
-					whileInView='visibleVertical'
-					viewport={{ once: true }}
-					className={style.skills}
-					id='arrRoles'
-				>
+				<div className={style.skills} id='arrRoles'>
 					<div className={style.roles}>
 						<motion.h3
-							custom={1}
-							variants={animation2}
+							initial={{ opacity: 0, y: -100 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.2 }}
+							viewport={{ once: true }}
 							className={style.mySkillsTitle}>{langv === 'RU' ? 'Мои навыки' : 'My Skills'}</motion.h3>
 						{arr_roles.map(el => (
 							<div key={el} className={style.roles_item}>
@@ -122,7 +118,7 @@ export default function Preview({ langv }) {
 									<motion.div
 										initial={{ opacity: 0, y: -100 }}
 										whileInView={{ opacity: 1, y: 0 }}
-										transition={{duration: 1, delay: 0.2 * el.id }}
+										transition={{delay: 0.2 * el.id }}
 										viewport={{ once: true }}
 										className={style.iconTatle}>
 										<div className={el.roles_icon}></div>
@@ -131,7 +127,7 @@ export default function Preview({ langv }) {
 									<motion.div
 										initial={{ opacity: 0, y: -100 }}
 										whileInView={{ opacity: 1, y: 0 }}
-										transition={{duration: 1, delay: 0.2 * el.id }}
+										transition={{ delay: 0.2 * el.id }}
 										viewport={{ once: true }}
 										className={style.line}></motion.div>
 									<motion.div
@@ -148,7 +144,7 @@ export default function Preview({ langv }) {
 							</div>
 						))}
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	)
