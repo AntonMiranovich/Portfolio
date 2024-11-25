@@ -5,7 +5,11 @@ import toDo from './assets/toDo.jpg'
 import pg from './assets/pg.jpg'
 import mntn from './assets/mntn.jpg'
 import style from './projects.module.css'
-import { motion } from 'framer-motion'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 export default function MyProjects({ langv }) {
 	const arr_projects = [
@@ -93,6 +97,64 @@ export default function MyProjects({ langv }) {
 				<h2>{langv === 'RU' ? 'Мои проекты' : 'My projects'}</h2>
 				<p>{langv === 'RU' ? 'Вот несколько проектов, которые я реализовал' : 'Here are some projects I have completed'}</p>
 				<div className={style.whirligig_projects}>
+					<Swiper
+						style={{ paddingBottom: 60 }}
+						effect={'coverflow'}
+						grabCursor={true}
+						centeredSlides={true}
+						loop={true}
+						slidesPerView={'auto'}
+						coverflowEffect={{
+							rotate: 0,
+							stretch: 0,
+							depth: 100,
+							modifier: 2,
+							slideShadows: true
+						}}
+						navigation={{
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+							clickable: true,
+						}}
+						modules={[EffectCoverflow, Navigation]}
+						className="swiper_container"
+					>
+						{arr_projects.map(el => (
+							<SwiperSlide style={{ maxWidth: 350 }} className={style.project_item}>
+								<img className={el.img} src={el.imgPath} alt='img' />
+								<div className={style.environment}>
+									{el.environment.map((elem, i) => (
+										<div key={i} className={style.env_item}>
+											<p>{elem}</p>
+										</div>
+									))}
+								</div>
+								<h3 className={style.name_item}>{el.name}</h3>
+								<p className={style.text_item}>{langv === 'RU' ? el.description : el.descriptionEN}</p>
+								{el.hrev ?
+									<div className={style.viewWrapper}>
+										<p className={style.view}><a href={el.hrev} target="_blank">{langv === 'RU' ? 'Посмотреть проект →' : 'See project →'}</a></p>
+										<p className={style.view}><a href={el.hrevCode} target="_blank">{langv === 'RU' ? 'Посмотреть код →' : 'See code →'}</a></p>
+									</div>
+									:
+									<div className={style.viewWrapper}>
+										<p className={style.view}><a href={el.hrevCode} target="_blank">{langv === 'RU' ? 'Посмотреть код →' : 'See code →'}</a></p>
+									</div>
+								}
+							</SwiperSlide>
+						))}
+						<div className="slider-controler">
+							<div className="swiper-button-prev slider-arrow">
+								<ion-icon name="arrow-back-outline"></ion-icon>
+							</div>
+							<div className="swiper-button-next slider-arrow">
+								<ion-icon name="arrow-forward-outline"></ion-icon>
+							</div>
+						</div>
+					</Swiper>
+
+				</div>
+				{/* <div className={style.whirligig_projects}>
 					{arr_projects.map(el => (
 						<motion.div whileHover={{ scale: 1.1 }} key={el.id} className={style.project_item}>
 							<img className={el.img} src={el.imgPath} alt='img' />
@@ -115,10 +177,9 @@ export default function MyProjects({ langv }) {
 									<p className={style.view}><a href={el.hrevCode} target="_blank">{langv === 'RU' ? 'Посмотреть код →' : 'See code →'}</a></p>
 								</div>
 							}
-
 						</motion.div>
 					))}
-				</div>
+				</div> */}
 			</div>
 		</section >
 	)

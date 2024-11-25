@@ -18,6 +18,7 @@
 
         .project_item {
             margin-top: 40px;
+            background-color: white;
             padding: 20px;
             border: 2px solid #000000;
             box-shadow: 5px 4px 0px 2px #000000;
@@ -65,7 +66,7 @@
             }
 
             .text_item {
-                margin-bottom: 70px;
+                margin-bottom: 40px;
                 font-size: 18px;
             }
 
@@ -80,7 +81,7 @@
                 gap: 5px;
 
 
-                .view{
+                .view {
                     font-size: 20px;
                     font-weight: 500;
                 }
@@ -91,7 +92,7 @@
                     position: relative;
                     cursor: pointer;
                 }
-    
+
                 .view a::after {
                     content: '';
                     position: absolute;
@@ -104,7 +105,7 @@
                     transform: scaleX(0);
                     transition: all 0.3s ease-in-out;
                 }
-    
+
                 .view a:hover::after {
                     visibility: visible;
                     transform: scaleX(1);
@@ -114,21 +115,5 @@
 
         }
 
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .wrapper {
-        & h1 {
-            font-size: 70px;
-        }
-
-        & h2 {
-            font-size: 44px;
-        }
-
-        & p {
-            font-size: 18px;
-        }
     }
 }
