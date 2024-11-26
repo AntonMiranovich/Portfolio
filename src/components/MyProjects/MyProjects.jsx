@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
+import { useEffect, useState } from 'react'
 
 export default function MyProjects({ langv }) {
 	const arr_projects = [
@@ -91,6 +92,21 @@ export default function MyProjects({ langv }) {
 		},
 	]
 
+	const [isMasked, setIsMasked] = useState(true);
+
+	useEffect(() => {
+		const handleResize = () => { setIsMasked(window.innerWidth > 500); };
+		window.addEventListener('resize', handleResize);
+		handleResize();
+		return () => { window.removeEventListener('resize', handleResize); };
+	}, []);
+
+	const swiperStyles = {
+		paddingBottom: 60,
+		WebkitMaskImage: isMasked ? '-webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)' : 'none',
+		maskImage: isMasked ? 'radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)' : 'none'
+	};
+
 	return (
 		<section id='myProjects'>
 			<div className={style.wrapper}>
@@ -98,11 +114,7 @@ export default function MyProjects({ langv }) {
 				<p>{langv === 'RU' ? 'Вот несколько проектов, которые я реализовал' : 'Here are some projects I have completed'}</p>
 				<div className={style.whirligig_projects}>
 					<Swiper
-						style={{
-							paddingBottom: 60,
-							WebkitMaskImage: '-webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)',
-							maskImage: 'radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)'
-						}}
+						style={swiperStyles}
 						effect={'coverflow'}
 						grabCursor={true}
 						centeredSlides={true}

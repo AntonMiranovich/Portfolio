@@ -5,10 +5,18 @@
   cursor: default;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #F9F5F2;
+  /* overflow-x: hidden; */
+}
+
 body {
   max-width: 1335px;
-  background: #F9F5F2;
-  overflow-x: hidden;
   margin: auto;
   padding: 0 30px;
 }
@@ -17,7 +25,8 @@ a {
   text-decoration: none;
 }
 
-p, ul li {
+p,
+ul li {
   font: 400 22px Montserrat;
   color: #000000;
 }
@@ -31,7 +40,10 @@ h2 {
   color: #8a4802;
   text-align: center;
 }
-h2 {
-  font: 800 80px Montserrat;
-  color: #8a4802;
+
+@media screen and (max-width: 1335px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
