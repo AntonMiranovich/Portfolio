@@ -92,7 +92,7 @@ export default function Preview({ langv }) {
 							viewport={{ once: true }}
 							className={style.mySkillsTitle}>{langv === 'RU' ? 'Мои навыки' : 'My Skills'}</motion.h3>
 						{arr_roles.map(el => (
-							<div key={el} className={style.roles_item}>
+							<div key={el.id} className={style.roles_item}>
 								<div className={style.info_item}>
 									<motion.div
 										initial={{ opacity: 0, y: -100 }}

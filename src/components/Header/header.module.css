@@ -150,6 +150,10 @@
 }
 
 @media screen and (max-width: 820px) {
+	.wrapper {
+		margin: 30px 5px 0;
+	}
+
 	.images {
 		gap: 10px;
 	}

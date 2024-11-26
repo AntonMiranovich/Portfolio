@@ -136,7 +136,7 @@ export default function MyProjects({ langv }) {
 						className="swiper_container"
 					>
 						{arr_projects.map(el => (
-							<SwiperSlide style={{ maxWidth: 350 }} className={style.project_item}>
+							<SwiperSlide key={el.id} style={{ maxWidth: 350 }} className={style.project_item}>
 								<img className={el.img} src={el.imgPath} alt='img' />
 								<div className={style.environment}>
 									{el.environment.map((elem, i) => (
