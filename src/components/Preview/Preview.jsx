@@ -44,7 +44,7 @@ export default function Preview({ langv }) {
 		},
 		{
 			id: 3,
-			name: langv === 'RU' ? 'Архитектор баз данных' : 'Database Architect',
+			name: langv === 'RU' ? 'База данных' : 'Database',
 			description: 'MySQL, PostgreSQL, MongoDB',
 			roles_icon: style.icon_3,
 			also: 'а также',
