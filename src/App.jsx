@@ -13,8 +13,8 @@ export default function App() {
     <Header langv={langv} setLangv={setLangv} />
     <main>
       <Preview langv={langv} />
-      <About langv={langv} />
       <Experience langv={langv} />
+      <About langv={langv} />
       <MyProjects langv={langv} />
     </main>
     <Footer langv={langv} />

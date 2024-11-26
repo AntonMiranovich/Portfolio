@@ -144,8 +144,21 @@ export default function Preview({ langv }) {
 							</div>
 						))}
 					</div>
+				</div >
+
+				<div className={style.experience}>
+					<motion.h3
+						initial={{ opacity: 0, y: -100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.2 }}
+						viewport={{ once: true }}
+						className={style.jobInfo}>{langv === 'RU' ? 'Опыт работы' : 'Experience'}</motion.h3>
+					<p style={{width:'80%'}}>{langv === 'RU' ?
+						'С более чем годом опыта работы в области разработки программного обеспечения, я приобрел разносторонние навыки в создании, поддержке и масштабировании приложений как на фронтенде, так и на бэкенде. Я умею работать с современными инструментами и технологиями, что позволяет мне эффективно реализовывать проекты разного уровня сложности.'
+						:
+						'With over a year of experience in software development, I have acquired versatile skills in creating, maintaining and scaling applications on both the frontend and backend. I am proficient in working with modern tools and technologies, which allows me to effectively implement projects of varying complexity.'}</p>
 				</div>
 			</div>
-		</section>
+		</section >
 	)
 }
