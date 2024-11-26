@@ -7,6 +7,7 @@
 	.title {
 		font-size: 28px;
 	}
+
 	.line {
 		border: 2px solid #000000;
 		width: 200px;
@@ -68,5 +69,11 @@
 			visibility: visible;
 			opacity: 1;
 		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.wrapper .icons_contacts {
+		gap: 40px;
 	}
 }

@@ -5,6 +5,7 @@
     h2 {
         text-align: center;
         color: #8a4802;
+
     }
 
     p {
@@ -115,9 +116,15 @@
                     transform: scaleX(1);
                 }
             }
-
-
         }
 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        h2 {
+            font: 700 70px Montserrat;
+        }
     }
 }
