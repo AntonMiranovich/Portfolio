@@ -98,7 +98,11 @@ export default function MyProjects({ langv }) {
 				<p>{langv === 'RU' ? 'Вот несколько проектов, которые я реализовал' : 'Here are some projects I have completed'}</p>
 				<div className={style.whirligig_projects}>
 					<Swiper
-						style={{ paddingBottom: 60 }}
+						style={{
+							paddingBottom: 60,
+							WebkitMaskImage: '-webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)',
+							maskImage: 'radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 90%)'
+						}}
 						effect={'coverflow'}
 						grabCursor={true}
 						centeredSlides={true}
@@ -143,43 +147,16 @@ export default function MyProjects({ langv }) {
 								}
 							</SwiperSlide>
 						))}
-						<div className="slider-controler">
-							<div className="swiper-button-prev slider-arrow">
-								<ion-icon name="arrow-back-outline"></ion-icon>
-							</div>
-							<div className="swiper-button-next slider-arrow">
-								<ion-icon name="arrow-forward-outline"></ion-icon>
-							</div>
-						</div>
 					</Swiper>
-
+					<div className="slider-controler">
+						<div className="swiper-button-prev slider-arrow" style={{ zIndex: 20, opacity: 1 }}>
+							<ion-icon name="arrow-back-outline"></ion-icon>
+						</div>
+						<div className="swiper-button-next slider-arrow">
+							<ion-icon name="arrow-forward-outline"></ion-icon>
+						</div>
+					</div>
 				</div>
-				{/* <div className={style.whirligig_projects}>
-					{arr_projects.map(el => (
-						<motion.div whileHover={{ scale: 1.1 }} key={el.id} className={style.project_item}>
-							<img className={el.img} src={el.imgPath} alt='img' />
-							<div className={style.environment}>
-								{el.environment.map((elem, i) => (
-									<div key={i} className={style.env_item}>
-										<p>{elem}</p>
-									</div>
-								))}
-							</div>
-							<h3 className={style.name_item}>{el.name}</h3>
-							<p className={style.text_item}>{langv === 'RU' ? el.description : el.descriptionEN}</p>
-							{el.hrev ?
-								<div className={style.viewWrapper}>
-									<p className={style.view}><a href={el.hrev} target="_blank">{langv === 'RU' ? 'Посмотреть проект →' : 'See project →'}</a></p>
-									<p className={style.view}><a href={el.hrevCode} target="_blank">{langv === 'RU' ? 'Посмотреть код →' : 'See code →'}</a></p>
-								</div>
-								:
-								<div className={style.viewWrapper}>
-									<p className={style.view}><a href={el.hrevCode} target="_blank">{langv === 'RU' ? 'Посмотреть код →' : 'See code →'}</a></p>
-								</div>
-							}
-						</motion.div>
-					))}
-				</div> */}
 			</div>
 		</section >
 	)

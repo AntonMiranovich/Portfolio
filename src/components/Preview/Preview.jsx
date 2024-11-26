@@ -118,7 +118,7 @@ export default function Preview({ langv }) {
 									<motion.div
 										initial={{ opacity: 0, y: -100 }}
 										whileInView={{ opacity: 1, y: 0 }}
-										transition={{delay: 0.2 * el.id }}
+										transition={{ delay: 0.2 * el.id }}
 										viewport={{ once: true }}
 										className={style.iconTatle}>
 										<div className={el.roles_icon}></div>
@@ -135,7 +135,7 @@ export default function Preview({ langv }) {
 										whileInView={{ opacity: 1 }}
 										transition={{ duration: 1, delay: 0.5 + 0.2 * el.id }}
 										viewport={{ once: true }}
-										className={style.list}>
+										className={!el.also ? style.list : style.listAlso}>
 										<p>{el.description}</p>
 										<h3 className={style.roles_name}>{langv === 'RU' ? el.also : el.also !== null ? 'and also' : null}</h3>
 										<p>{el.additionally}</p>

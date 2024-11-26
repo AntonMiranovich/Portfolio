@@ -1,6 +1,7 @@
 .wrapper {
     margin: 0 0 200px;
 
+
     h2 {
         text-align: center;
         color: #8a4802;
@@ -10,11 +11,14 @@
         text-align: center;
     }
 
+
     .whirligig_projects {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         justify-content: center;
+        position: relative;
+
 
         .project_item {
             margin-top: 40px;

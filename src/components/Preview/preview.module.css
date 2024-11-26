@@ -6,7 +6,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap-reverse;
 		gap: 30px;
-		margin-bottom: 200px;
+		margin-bottom: 100px;
 
 		.about_me {
 			display: flex;
@@ -110,6 +110,15 @@
 					p {
 						width: 57%;
 					}
+				}
+
+				.listAlso {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					gap: 20px;
 				}
 			}
 		}
