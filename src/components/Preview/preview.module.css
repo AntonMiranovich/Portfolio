@@ -160,6 +160,9 @@
 		}
 	}
 
+	.experience {
+		margin-top: 60px;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -171,6 +174,10 @@
 		& p {
 			font-size: 18px;
 		}
+	}
+
+	.experience {
+		margin-top: 60px;
 	}
 }
 
@@ -186,11 +193,19 @@
 			font-size: 18px;
 		}
 	}
+
+	.experience {
+		margin-top: 60px;
+	}
 }
 
 @media screen and (max-width: 600px) {
 	.skills .roles {
 		gap: 50px;
+	}
+
+	.experience {
+		margin-top: 60px;
 	}
 }
 
@@ -199,6 +214,9 @@
 		& h1 {
 			font-size: 44px;
 		}
+	}
 
+	.experience {
+		margin-top: 60px;
 	}
 }
