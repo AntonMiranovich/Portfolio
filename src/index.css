@@ -12,13 +12,14 @@ body {
   margin: 0;
   padding: 0;
   background: #F9F5F2;
-  /* overflow-x: hidden; */
 }
 
 body {
   max-width: 1335px;
   margin: auto;
   padding: 0 30px;
+  overflow-x: hidden;
+  
 }
 
 a {
